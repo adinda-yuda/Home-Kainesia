@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kainesia | Indonesian Fabric </title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  </head>
+  <body>
+
+    <header>
+      <a href="#" class="brand">Kainesia</a>
+      <div class="menu-btn"></div>
+      <div class="navigation">
+        <div class="navigation-items">
+          <a href="./index.html">Beranda</a>
+          <a href="./tentang.html">Tentang Kami</a>
+          <a href="./jelajah.html">Jelajahi</a>
+          <a href="./beli.html">Beli</a>
+          <a href="./pelajari.html">Pelajari</a>
+        </div>
+      </div>
+    </header>
+
+    <section class="home">
+      <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+      <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+    
+      <div class="content active">
+        <h1>Batik Jlamprang.<br><span>Pekalongan</span></h1>
+        <p>Batik Jlamprang adalah batik hasil kreasi masyarakat Kota Pekalongan sebagai <br> pewaris budaya dengan mengetengahkan ragam hias ceplokan dengan motif <br> geometris dan bunga Padma di tengahnya. Motif Jlamprang merupakan motif <br> yang berbentuk semacam nitik dari Yogyakarta yang disebut juga dengan motif <br> batik geometris, biasanya berupa lingkaran maupun segitiga. </p>
+        <a href="./jelajah.html">Jelajahi</a>
+      </div>
+      <div class="content">
+        <h1>Gringsing Tenganan.<br><span>Bali</span></h1>
+        <p>Kain gringsing adalah satu-satunya kain tenun tradisional Indonesia yang dibuat <br> menggunakan teknik teknik dobel ikat dan memerlukan waktu 2-5 tahun. Kain ini berasal dari Desa Tenganan, Bali. Umumnya, masyarakat Tenganan memiliki kain gringsing berusia ratusan tahun yang digunakan dalam upacara khusus. Kata gringsing berasal dari gring yang berarti 'sakit' dan sing yang berarti 'tidak', sehingga bila digabungkan menjadi 'tidak sakit'.</p>
+        <a href="./jelajah.html">Jelajahi</a>
+      </div>
+      <div class="content">
+        <h1>Lurik.<br><span>Jogja</span></h1>
+        <p>Kain tenun lurik diperkirakan sudah ada sejak 3.000 tahun silam. Sejarah mencatat bahwa <br> orang-orang membuat kain lurik dengan cara di tenun. Dalam sejarah kain tenun lurik dapat dilihat di situs bersejarah Gilimanuk, Melolo, Sumba Timur, Gunung Wingko, Yogyakarta dan lain sebagainya. Ditempat tersebut ditemukan cap tenunan, alat pemintal, dan bahan-bahan untuk membuat kain tenun lurik.</p>
+        <a href="./jelajah.html">Jelajahi</a>
+      </div>
+    
+      <div class="media-icons">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/kaines.ia/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+      </div>
+
+      
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+    //Javacript for responsive navigation menu
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
+
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
+
+    //Javacript for video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+
+    var sliderNav = function(manual){
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
+
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
+
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      btns[manual].classList.add("active");
+      slides[manual].classList.add("active");
+      contents[manual].classList.add("active");
+    }
+
+    btns.forEach((btn, i) => {
+      btn.addEventListener("click", () => {
+        sliderNav(i);
+      });
+    });
+    </script>
+  =
+  </body>
+</html>
